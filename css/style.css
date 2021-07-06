@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family:'Motserrat',sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: .5rem;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: 0.05rem;
+}
+.section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+
+}
+
+.section-title span{ 
+    color: crimson;
+}
+
+.cta{
+    display: inline-block;
+    color: crimson;
+    padding: 1rem 3rem;
+    border: 0.2rem solid crimson;
+    border-radius: 5rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 3.6rem;
+    transition: 0.3s ease ;
+    transition-property: background-color,color;
+}
+
+.cta:hover{
+    color: white;
+    background-color: crimson;
+}
+
+/* Hero Section */
+
+#hero{
+    background-image:url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-position:top center;
+    position: relative;
+    z-index: 1;
+
+}
+#hero::after{
+    content: '';
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    z-index: -1;
+}
+
+#hero .hero{
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 5rem;
+    z-index: -1;
+    justify-content: flex-start;
+}
+
+#hero h1{
+    display: block;
+    position: relative;
+    width: fit-content;
+    padding: 0 0.5rem;
+    font-size: 4rem;
+    color:transparent;
+    animation: text_reveal 0.5s ease forwards;
+    
+
+}
+#hero h1:nth-child(1) {
+    animation-delay: 1.5s;
+}
+#hero h1:nth-child(2) {
+    animation-delay: 2.5s;
+}
+#hero h1:nth-child(3) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 3.5s;
+}
+
+#hero h1 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: crimson;
+    animation: text_reveal_box 1s ease;
+    animation-delay: 0.3s;
+
+}
+#hero h1:nth-child(1) span{
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2) span{
+    animation-delay: 2s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 3s;
+}
+
+
+/* End Hero Section */
+
+/* Services Section */
+#services .services {
+    flex-direction: column;
+    text-align: center;
+    max-width: 150rem;
+    height: 110vh;
+    margin: 0 auto;
+    padding: 10rem 0;
+    
+    
+}
+#services .services .service-top p{
+    width: 80%;
+    margin:0 auto ;
+     
+     
+ }
+#services .service-bottom p{
+   color:white;
+   text-align: left;
+}
+
+#services .service-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin-top: 5rem;
+    
+    
+}
+
+#services  .service-item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-basis: 25%; /*Eğer alanı yeterse verilen genişlik değerini alır 
+    Yetmezse Alabileceği değeri alır.*/
+    flex-wrap: wrap;
+    padding: 3rem;
+    background-image: url(./img/img-1.png);
+    background-size: cover;
+    background-position: top;
+    margin: 1rem 2rem;
+    border-radius: 5rem;
+    z-index: 1;
+}
+
+#services .service-item::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+    opacity: .8;
+    border-radius: 5rem;
+    z-index: -1;
+}
+#services .service-bottom .icon{
+    height: 8rem;
+    width: 8rem;
+    margin-bottom:2rem ;
+}
+
+#services .service-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+/* End Services Section */
+/* Projects Section */
+#projects .projects{
+    
+    flex-direction: column;
+    max-width:120rem ;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+}
+
+#projects .projects-header h1{
+    margin-bottom: 5rem;
+}
+#projects .all-projects{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+#projects .project-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 5rem;
+    margin: 2rem auto 0 auto;
+    overflow-wrap: break-word;
+    
+}
+
+#projects .project-info{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 50%;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+    height: 100%;
+    padding: 3rem;
+    color: white;
+    margin: 0;
+ 
+}
+
+
+#projects .project-info h2{
+
+    font-size: 4rem;
+    font-weight: 500;
+ 
+}
+#projects .project-info h3{
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 1rem;
+ 
+}
+#projects .project-info p{
+
+    color: white;
+ 
+}
+
+#projects .project-img{
+position: relative;
+flex-basis: 50%;
+height: 30rem;
+width: 100%;
+object-fit:cover;
+overflow: hidden;
+}
+
+#projects .project-img::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg,#29323c 0%,#485563 100%);
+    opacity:.7;
+    content: "";
+
+    }
+    #projects .project-img img{
+        transition: transform .3s ease ;
+    }
+    #projects .project-item:hover .project-img img{
+        transform: scale(1.1);
+    }
+
+/* End Projects Section */
+
+
+/* About Section */
+
+#about .about{
+    flex-direction: column-reverse;
+    text-align: center;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem 2rem;
+}
+
+#about .col-left{
+    width: 25rem;
+    height: 36rem;
+}
+
+#about .col-right{
+    width: 100%;
+    
+}
+
+#about .col-right h2{
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    margin-bottom:1rem ;
+}
+
+#about .col-right .cta{
+    color: black;
+    margin-bottom: 5rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+}
+
+#about .col-right p{
+    margin-bottom: 2rem;
+}
+
+#about .col-left .about-img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+    border: 10px solid white;
+    
+    
+}
+#about .col-left .about-img img{
+    position: relative;
+    left: -0.1rem;
+    bottom: -0.1rem;
+}
+
+
+#about .col-left .about-img::after{
+
+    content:'';
+    position: absolute;
+    left: -3.3rem;
+    top: 1.8rem;
+    height: 98%;
+    width: 98%;
+    border: .7rem solid crimson;
+    z-index: -1;
+    
+}
+
+/* End About Section */
+
+/* Contact Section */
+
+#contact .contact{
+    max-width: 120rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact .contact-items{
+    width: 100%;
+   
+
+}
+#contact .contact-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    text-align: center;
+    min-width: 90%;
+    padding: 3rem;
+    margin: 3rem;
+    border-radius: 1rem;
+    box-shadow:0px 0px 1.8rem 0 #0000002c ;
+    transition: .3s ease box-shadow;
+    
+
+}
+
+#contact .contact-item:hover{
+    box-shadow: 0px 0px .5rem 0px #0000002c ;
+}
+
+#contact{
+    justify-content: center;
+    padding:3rem;
+    margin:3rem auto 0 auto;
+    box-shadow:0px 0px 1.8rem 0 #0000002c;
+    min-height: 30vh;
+    
+
+}
+
+.contact .icon{
+    width: 7rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+#contact .contact-info h2{
+    font-size: 2.5rem;
+    font-weight:500;
+    margin-bottom: .5rem;
+}
+
+#contact .contact-info h3{
+    font-size: 1.3rem;
+    font-weight:600;
+    line-height: 2rem;
+}
+
+
+
+
+
+/* End Contact Section */
+
+/* keyframes */
+
+    @keyframes text_reveal_box{
+        50%{
+            width: 100%;
+            left: 0;
+
+        }
+        100%{
+            width: 0;
+            left: 100%;
+        }
+
+    }
+
+    @keyframes text_reveal{
+        100%{
+            color: white;
+        }
+    }
+
+    @keyframes text_reveal_name{
+        100%{
+            color: crimson;
+        }
+    }
+
+
+/* End keyframes */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End Hero Section */
